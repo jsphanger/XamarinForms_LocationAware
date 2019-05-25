@@ -88,6 +88,13 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\checkin.png" />
+    <AndroidResource Include="Resources\drawable\Default-568h%402x.png" />
+    <AndroidResource Include="Resources\drawable\Default-Portrait.png" />
+    <AndroidResource Include="Resources\drawable\Default-Portrait%402x.png" />
+    <AndroidResource Include="Resources\drawable\Default.png" />
+    <AndroidResource Include="Resources\drawable\Default%402x.png" />
+    <AndroidResource Include="Resources\drawable\trackgpsloc.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
