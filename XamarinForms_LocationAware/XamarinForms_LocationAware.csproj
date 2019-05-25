@@ -14,6 +14,7 @@
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
     <PackageReference Include="Rg.Plugins.Popup" Version="1.1.5.188" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
@@ -21,8 +22,6 @@
     <Folder Include="Behaviors\" />
     <Folder Include="Converters\" />
     <Folder Include="Behaviors\Base\" />
-    <Folder Include="Services\" />
-    <Folder Include="Services\DataSource\" />
-    <Folder Include="Services\DataSource\SavedLocations\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>

@@ -36,6 +36,7 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             
             <Grid.ColumnDefinitions>
@@ -50,10 +51,12 @@
             <Label x:Name="lblLocationLongitude" Text="{Binding LongitudeDisplay, Mode=OneWay}" FontAttributes="Italic" Grid.Row="1" Grid.Column="1" />
             
             <Label Text="Name:" HorizontalOptions="Start" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
-            <Entry x:Name="txtLocationName" Text="{Binding Location.Name}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
+            <Entry x:Name="txtLocationName" Text="{Binding Location.Name, Mode=TwoWay}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
             
-            <Button x:Name="btnDeleteLocation" Text="Remove" HorizontalOptions="Start" Grid.Row="4" Grid.Column="0" IsVisible="{Binding EditMode}" />
-            <Button x:Name="btnSaveLocation" Text="Save" HorizontalOptions="End" Grid.Row="4" Grid.Column="1" />
+            <Label Text="{Binding ErrorMessage}" TextColor="Red" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" />
+            
+            <Button x:Name="btnDeleteLocation" Text="Remove" Command="{Binding RemoveLocationCommand}" HorizontalOptions="Start" Grid.Row="5" Grid.Column="0" IsVisible="{Binding EditMode}" />
+            <Button x:Name="btnSaveLocation" Text="Save" Command="{Binding SaveLocationCommand}" HorizontalOptions="End" Grid.Row="5" Grid.Column="1" />
         </Grid>
     </StackLayout>
         

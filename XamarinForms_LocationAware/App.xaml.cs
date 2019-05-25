@@ -1,11 +1,27 @@
 ﻿using System;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinForms_LocationAware.Data;
 
 namespace XamarinForms_LocationAware
 {
     public partial class App : Application
     {
+        static LocationDatabase _database;
+        public static LocationDatabase Database
+        {
+            get
+            {
+                if (_database == null)
+                {
+                    _database = new LocationDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                                    "LocationDatabase.db3"));
+                }
+                return _database;
+            }
+        }
+
         public App()
         {
             InitializeComponent();
