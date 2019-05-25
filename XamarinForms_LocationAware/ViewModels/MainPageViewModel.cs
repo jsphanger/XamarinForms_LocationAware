@@ -5,13 +5,15 @@ using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 using XamarinForms_LocationAware.Models;
-
+using XamarinForms_LocationAware.Services.DataSource.SavedLocations;
 
 namespace XamarinForms_LocationAware.ViewModels
 {
     public class MainPageViewModel : INotifyPropertyChanged
     {
         private IList<LocationModel> _storedLocations;
+        private ISavedLocationsRepository _savedLocationRepository;
+
         public IList<LocationModel> StoredLocations
         {
             get => _storedLocations;
@@ -28,6 +30,12 @@ namespace XamarinForms_LocationAware.ViewModels
         {
             // when user taps 'check in' button
         });
+
+        public MainPageViewModel()
+        {
+            _savedLocationRepository = new SavedLocationsRepository();
+            StoredLocations = _savedLocationRepository.GetSavedLocations();
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
