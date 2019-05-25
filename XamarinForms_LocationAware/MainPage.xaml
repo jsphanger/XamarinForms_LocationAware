@@ -27,19 +27,21 @@
             
             <!-- Top Bar w/App name and add location button -->
             <Label x:Name="lblProgramTitle" Text="Xamarin Forms Awareness" Grid.Row="0" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large" />
-            <ImageButton x:Name="btnAddLocation" Source="trackgpsloc.png" Grid.Row="0" Grid.Column="1" HeightRequest="50" HorizontalOptions="End" />
+            <ImageButton x:Name="btnAddLocation" Source="trackgpsloc.png" Grid.Row="0" Grid.Column="1" HeightRequest="50" HorizontalOptions="End" Command="{Binding AddLocationCommand}" />
             
             <!-- Scrollable list view -->
             <ListView x:Name="lstSavedLocations" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding StoredLocations}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Label Text="{Binding Name}" />
+                        <ViewCell>
+                            <Label Text="{Binding Name}" />
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
             
             <!-- Bottom bar with verify button -->
-            <ImageButton x:Name="btnVerifyLocation" Source="checkin.png" HorizontalOptions="End" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="50" />
+            <ImageButton x:Name="btnVerifyLocation" Source="checkin.png" HorizontalOptions="End" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="50" Command="{Binding CheckInCommand}" />
             
         </Grid>
         
