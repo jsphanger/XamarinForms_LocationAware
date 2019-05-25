@@ -1,5 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinForms_LocationAware.App">
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinForms_LocationAware.App"
+             xmlns:converters="clr-namespace:XamarinForms_LocationAware.Converters">
     <Application.Resources>
+        
+        <converters:ItemTappedEventArgsConverter x:Key="ItemTappedEventArgsConverter" />
     </Application.Resources>
 </Application>
