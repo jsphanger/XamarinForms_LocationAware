@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Windows.Input;
+
+using Rg.Plugins.Popup.Services;
+
 using Xamarin.Forms;
 using XamarinForms_LocationAware.Models;
 using XamarinForms_LocationAware.Services.DataSource.SavedLocations;
@@ -24,6 +25,7 @@ namespace XamarinForms_LocationAware.ViewModels
         {
             // when user taps 'add' button
             // prompt user to input a name
+            PopupNavigation.Instance.PushAsync(new LocationInformation());
         });
 
         public ICommand CheckInCommand => new Command(() =>
@@ -31,9 +33,10 @@ namespace XamarinForms_LocationAware.ViewModels
             // when user taps 'check in' button
         });
 
-        public ICommand LocationTapCommand => new Command(() =>
+        public ICommand LocationTapCommand => new Command<ItemTappedEventArgs>((ItemTappedEventArgs args) =>
         {
-            // when the user taps a saved location
+            var loc = (LocationModel)args.Item;
+            PopupNavigation.Instance.PushAsync(new LocationInformation(loc));
         });
 
         public MainPageViewModel()

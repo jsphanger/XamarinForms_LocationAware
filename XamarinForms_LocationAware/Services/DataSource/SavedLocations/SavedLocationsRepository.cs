@@ -13,12 +13,14 @@ namespace XamarinForms_LocationAware.Services.DataSource.SavedLocations
             {
                 new LocationModel
                 {
+                    Id = Guid.NewGuid(),
                     Latitude = 0.0,
                     Longitude = 0.0,
                     Name = "Pat's House"
                 },
                 new LocationModel
                 {
+                    Id = Guid.NewGuid(),
                     Latitude = 43.44,
                     Longitude = 113.01,
                     Name = "Joseph's House"
