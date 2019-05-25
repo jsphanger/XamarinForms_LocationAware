@@ -1,7 +1,37 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:XamarinForms_LocationAware" x:Class="XamarinForms_LocationAware.MainPage">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:XamarinForms_LocationAware" 
+             x:Class="XamarinForms_LocationAware.MainPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+    
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            
+            <!-- Top Bar w/App name and add location button -->
+            <Label x:Name="lblProgramTitle" Text="Xamarin Forms Awareness" Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large" />
+            <ImageButton x:Name="btnAddLocation" Source="trackgpsloc.png" Grid.Row="0" Grid.Column="1" HeightRequest="50" HorizontalOptions="End" />
+            
+            <!-- Scrollable list view -->
+            <ListView x:Name="lstSavedLocations" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+            
+            <!-- Bottom bar with verify button -->
+            <ImageButton x:Name="btnVerifyLocation" Source="checkin.png" HorizontalOptions="End" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="50" />
+            
+        </Grid>
+        
     </StackLayout>
+    
 </ContentPage>
