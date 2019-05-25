@@ -12,44 +12,46 @@
         <vm:MainPageViewModel />
     </ContentPage.BindingContext>
     
-    <StackLayout>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
         
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="8*" />
-                <ColumnDefinition Width="2*" />
-            </Grid.ColumnDefinitions>
-            
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="6*" />
-                <RowDefinition Height="2*" />
-            </Grid.RowDefinitions>
-            
-            <!-- Top Bar w/App name and add location button -->
-            <Label x:Name="lblProgramTitle" Text="Xamarin Forms Awareness" Grid.Row="0" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large" />
-            <ImageButton x:Name="btnAddLocation" Source="trackgpsloc.png" Grid.Row="0" Grid.Column="1" HeightRequest="50" HorizontalOptions="End" Command="{Binding AddLocationCommand}" />
-            
-            <!-- Scrollable list view -->
-            <ListView x:Name="lstSavedLocations" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding StoredLocations}">
-                <ListView.Behaviors>
-                    <behaviors:EventToCommandBehavior EventName="ItemTapped"
-                                                      Command="{Binding LocationTapCommand}" />
-                    </ListView.Behaviors>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Label Text="{Binding Name}" />
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            
-            <!-- Bottom bar with verify button -->
-            <ImageButton x:Name="btnVerifyLocation" Source="checkin.png" HorizontalOptions="End" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="50" Command="{Binding CheckInCommand}" />
-            
-        </Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="75*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
         
-    </StackLayout>
+        <!-- Top Bar w/App name and add location button -->
+        <Label x:Name="lblProgramTitle" Text="Xamarin Forms Awareness" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large" />
+        <ImageButton x:Name="btnAddLocation" Source="trackgpsloc.png" Grid.Row="0" Grid.Column="1" HeightRequest="50" HorizontalOptions="End" Command="{Binding AddLocationCommand}" />
+        
+        <!-- Scrollable list view -->
+        <Label Text="Saved Locations:" Margin="10" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+        <ListView x:Name="lstSavedLocations" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding StoredLocations}">
+            
+            <ListView.Behaviors>
+                <behaviors:EventToCommandBehavior EventName="ItemTapped"
+                                                  Command="{Binding LocationTapCommand}"
+                                                  CommandParameter="{Binding Id}" />
+            </ListView.Behaviors>
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Margin="15, 0" Text="{Binding Name}" VerticalOptions="Center" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <!-- Bottom bar with verify button -->
+        <ImageButton x:Name="btnVerifyLocation" Source="checkin.png" HorizontalOptions="End" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="50" Command="{Binding CheckInCommand}" />
+        
+    </Grid>
+        
     
 </ContentPage>

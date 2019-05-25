@@ -13,6 +13,7 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.1.5.188" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
@@ -21,7 +22,6 @@
     <Folder Include="Converters\" />
     <Folder Include="Behaviors\Base\" />
     <Folder Include="Services\" />
-    <Folder Include="Services\Dialog\" />
     <Folder Include="Services\DataSource\" />
     <Folder Include="Services\DataSource\SavedLocations\" />
   </ItemGroup>
