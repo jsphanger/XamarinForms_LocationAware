@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:XamarinForms_LocationAware" 
              xmlns:vm="clr-namespace:XamarinForms_LocationAware.ViewModels"
              x:Class="XamarinForms_LocationAware.MainPage"
+             xmlns:behaviors="clr-namespace:XamarinForms_LocationAware.Behaviors"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true">
     
@@ -31,6 +32,10 @@
             
             <!-- Scrollable list view -->
             <ListView x:Name="lstSavedLocations" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding StoredLocations}">
+                <ListView.Behaviors>
+                    <behaviors:EventToCommandBehavior EventName="ItemTapped"
+                                                      Command="{Binding LocationTapCommand}" />
+                    </ListView.Behaviors>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

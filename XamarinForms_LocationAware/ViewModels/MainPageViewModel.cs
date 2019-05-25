@@ -9,7 +9,7 @@ using XamarinForms_LocationAware.Services.DataSource.SavedLocations;
 
 namespace XamarinForms_LocationAware.ViewModels
 {
-    public class MainPageViewModel : INotifyPropertyChanged
+    public class MainPageViewModel : BaseViewModel
     {
         private IList<LocationModel> _storedLocations;
         private ISavedLocationsRepository _savedLocationRepository;
@@ -31,17 +31,16 @@ namespace XamarinForms_LocationAware.ViewModels
             // when user taps 'check in' button
         });
 
+        public ICommand LocationTapCommand => new Command(() =>
+        {
+            // when the user taps a saved location
+        });
+
         public MainPageViewModel()
         {
             _savedLocationRepository = new SavedLocationsRepository();
             StoredLocations = _savedLocationRepository.GetSavedLocations();
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

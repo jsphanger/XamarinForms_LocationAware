@@ -16,6 +16,12 @@ namespace XamarinForms_LocationAware.Services.DataSource.SavedLocations
                     Latitude = 0.0,
                     Longitude = 0.0,
                     Name = "Pat's House"
+                },
+                new LocationModel
+                {
+                    Latitude = 43.44,
+                    Longitude = 113.01,
+                    Name = "Joseph's House"
                 }
             };
         }
