@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace XamarinForms_LocationAware.Droid
 {
-    [Activity(Label = "XamarinForms_LocationAware", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Location Aware", Icon = "@drawable/checkin_120120", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

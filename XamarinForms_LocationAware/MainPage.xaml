@@ -20,14 +20,18 @@
         
         <Grid.RowDefinitions>
             <RowDefinition Height="10*" />
-            <RowDefinition Height="5*" />
-            <RowDefinition Height="75*" />
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="72*" />
             <RowDefinition Height="10*" />
         </Grid.RowDefinitions>
         
         <!-- Top Bar w/App name and add location button -->
-        <Label x:Name="lblProgramTitle" Text="Xamarin Forms Awareness" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large" />
-        <ImageButton x:Name="btnAddLocation" Source="trackgpsloc.png" Grid.Row="0" Grid.Column="1" HeightRequest="50" HorizontalOptions="End" Command="{Binding AddLocationCommand}" />
+        <Label x:Name="lblProgramTitle" Text="Location Aware" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" Margin="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large" />
+        <ImageButton x:Name="btnAddLocation" Source="trackgpsloc.png" Grid.Row="0" Grid.Column="1" HeightRequest="50" HorizontalOptions="End" Command="{Binding AddLocationCommand}">
+            <ImageButton.BackgroundColor>
+                <OnPlatform x:TypeArguments="Color" Android="#00000000" />
+            </ImageButton.BackgroundColor>
+        </ImageButton>
         
         <!-- Scrollable list view -->
         <Label Text="Saved Locations:" Margin="10" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
@@ -49,7 +53,11 @@
         </ListView>
         
         <!-- Bottom bar with verify button -->
-        <ImageButton x:Name="btnVerifyLocation" Source="checkin.png" HorizontalOptions="End" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="50" Command="{Binding CheckInCommand}" />
+        <ImageButton x:Name="btnVerifyLocation" Source="checkin.png" HorizontalOptions="End" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="50" Command="{Binding CheckInCommand}">
+            <ImageButton.BackgroundColor>
+                <OnPlatform x:TypeArguments="Color" Android="#00000000" />
+            </ImageButton.BackgroundColor>
+        </ImageButton>
         
     </Grid>
         

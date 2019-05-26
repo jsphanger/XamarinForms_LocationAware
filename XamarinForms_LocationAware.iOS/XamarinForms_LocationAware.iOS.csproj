@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -78,42 +78,25 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
-      <Visible>false</Visible>
-    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_120120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_180180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_120120-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_180180-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_4040.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_6060.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_5858.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_8787.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_8080.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_120120-3.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_4040-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_2020.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_5858-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_4040-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_8080-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_2929.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_167167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_152152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\checkin_7676.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -139,11 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\checkin.png" />
-    <BundleResource Include="Resources\Default-568h%402x.png" />
-    <BundleResource Include="Resources\Default-Portrait.png" />
-    <BundleResource Include="Resources\Default-Portrait%402x.png" />
-    <BundleResource Include="Resources\Default.png" />
-    <BundleResource Include="Resources\Default%402x.png" />
     <BundleResource Include="Resources\trackgpsloc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
   </ItemGroup>
 </Project>

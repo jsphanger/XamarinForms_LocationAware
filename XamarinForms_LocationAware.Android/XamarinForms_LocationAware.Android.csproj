@@ -93,6 +93,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\drawable\checkin.png" />
     <AndroidResource Include="Resources\drawable\trackgpsloc.png" />
+    <AndroidResource Include="Resources\drawable\checkin_120120.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
