@@ -29,7 +29,7 @@ namespace XamarinForms_LocationAware.ViewModels
                 if (location == null)
                 {
                     var lastKnown = await Geolocation.GetLastKnownLocationAsync();
-                    location = lastKnown == null ? new Location() { Latitude = 0, Longitude = 0 } : await Geolocation.GetLastKnownLocationAsync();
+                    location = lastKnown == null ? new Location() : lastKnown;
                 }
 
                 LocationModel loc = new LocationModel() { Latitude = location.Latitude, Longitude = location.Longitude };
@@ -58,7 +58,7 @@ namespace XamarinForms_LocationAware.ViewModels
                 if (location == null)
                 {
                     var lastKnown = await Geolocation.GetLastKnownLocationAsync();
-                    location = lastKnown == null ? new Location() { Latitude = 0, Longitude = 0 } : await Geolocation.GetLastKnownLocationAsync();
+                    location = lastKnown == null ? new Location() : lastKnown;
                 }
 
                 double bestMillage = 0.0;
